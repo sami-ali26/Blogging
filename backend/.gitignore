@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.env
+
+# Build output
+dist/
+.workers/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db

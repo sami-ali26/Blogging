@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": [
+      "ESNext"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "outDir": "./dist" // <--- ADD THIS LINE
+  },
+  "include": [
+    "src/**/*.ts" // <--- Good to explicitly include your source
+  ],
+  "exclude": [
+    "node_modules",
+    "dist" // <--- Good to exclude the output directory from type checking
+  ]
+}
