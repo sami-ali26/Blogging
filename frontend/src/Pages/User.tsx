@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { BACKEND_URL } from "../config"
-
+import { api_url } from "../hooks"
 
 interface UserData {
     title: string,
@@ -15,7 +14,7 @@ export const User = () => {
     const [userinfo, setUserinfo] = useState<UserData[]>([])
 
     useEffect(() => {
-        axios.get(`${BACKEND_URL}/api/v1/user/info`, {
+        axios.get(`${api_url}/api/v1/user/info`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }
