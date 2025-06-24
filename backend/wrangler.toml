@@ -1,7 +1,7 @@
-name = "my-hono-project"
+name = "my-blogging-project"
 main = "src/index.ts"
 compatibility_date = "2024-06-07"
 
 [vars]
-DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=your-key"
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=your_key"
 JWT_SECRET = "your_secret"

@@ -35,7 +35,7 @@ export const Blogs = () => {
 
   if (loading) { 
     return <div>
-      <Appbar authorName={username[0]}/>
+      <Appbar authorName={username || 'anonymous'}/>
       <div className="flex justify-center">
       <div>
           <BlogsSkeleton/>
@@ -48,7 +48,7 @@ export const Blogs = () => {
   } 
    {
     return <div>
-        <Appbar authorName={username[0]}/>
+        <Appbar authorName={username || 'anonymous'}/>
         <div className="flex justify-center ">
             <div>
                 {blogs.map(blog => <BlogCard 

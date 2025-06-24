@@ -28,7 +28,7 @@ export const Appbar = ({ authorName = "anonymous" }: { authorName?: string }) =>
 
         </div>
         <Link to={'/user'}>       
-         <Avatar size={"big"} authorName={authorName[0] } />
+         <Avatar size={"big"} authorName={authorName[0].toUpperCase()} />
         </Link>
       </div>
     </div>
