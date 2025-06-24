@@ -4,6 +4,7 @@ import { Appbar } from "../Components/Appbar"
 import { useState, type ChangeEvent } from "react"
 import { useNavigate } from "react-router-dom"
 
+const apiUrl = import.meta.env.VITE_API_URL;
 
 
 export const CreateBlog = () => {
@@ -26,7 +27,7 @@ export const CreateBlog = () => {
        }}/>
        <button onClick={async () => {
         setdisable(true)
-       const response = await axios.post('http://localhost:8787/api/v1/blog', {
+       const response = await axios.post(`${apiUrl}/api/v1/blog`, {
             title,
             content
         },

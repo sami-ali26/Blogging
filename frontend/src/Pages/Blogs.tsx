@@ -2,10 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { Appbar } from "../Components/Appbar";
 import { BlogCard } from "../Components/BlogCard";
 import { BlogsSkeleton } from "../Components/BlogsSkeleton";
-import { BACKEND_URL } from "../config";
 import { useBlogs } from "../hooks";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+import { api_url } from "../hooks";
 
 export const Blogs = () => {
   const {loading, blogs} = useBlogs();
@@ -21,7 +22,7 @@ export const Blogs = () => {
           if(!token){
               navigate("/signin")
           }else{
-          const res = await axios.get(`${BACKEND_URL}/api/v1/user/info`,{
+          const res = await axios.get(`${api_url}/api/v1/user/info`,{
               headers: {
                   Authorization: localStorage.getItem("token")
               }
