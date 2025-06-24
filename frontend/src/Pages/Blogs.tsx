@@ -6,7 +6,7 @@ import { useBlogs } from "../hooks";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import { api_url } from "../hooks";
+import { API_URL } from "../hooks";
 
 export const Blogs = () => {
   const {loading, blogs} = useBlogs();
@@ -22,7 +22,7 @@ export const Blogs = () => {
           if(!token){
               navigate("/signin")
           }else{
-          const res = await axios.get(`${api_url}/api/v1/user/info`,{
+          const res = await axios.get(`${API_URL}/api/v1/user/info`,{
               headers: {
                   Authorization: localStorage.getItem("token")
               }

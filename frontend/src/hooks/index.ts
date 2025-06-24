@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const api_url = import.meta.env.VITE_API_URL;
+export const API_URL = import.meta.env.VITE_API_URL;
+
+
+
+
 
 export interface Blogdata {
   content: string;
@@ -16,7 +20,7 @@ export const useBlog = ({id}: {id: string}) => {
   const [blog, setBlog] = useState<Blogdata>();
 
   useEffect(() => {
-    axios.get(`${api_url}/api/v1/blog/${id}`, {
+    axios.get(`${API_URL}/api/v1/blog/${id}`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -41,7 +45,7 @@ export const useBlogs = () => {
 
   useEffect(() => {
     axios
-      .get(`${api_url}/api/v1/blog/bulk`, {
+      .get(`${API_URL}/api/v1/blog/bulk`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
